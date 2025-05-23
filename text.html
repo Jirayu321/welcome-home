@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ป้ายไฟต้อนรับ</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      .neon-text {
+        font-size: 4rem;
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff,
+          0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff, 0 0 75px #ff00ff;
+        animation: flicker 1.5s infinite alternate;
+      }
+
+      @keyframes flicker {
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+          opacity: 1;
+          text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff,
+            0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff,
+            0 0 75px #ff00ff;
+        }
+        20%,
+        24%,
+        55% {
+          opacity: 0.4;
+          text-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="neon-text">ยินดีต้อนรับกลับบ้าน 💖 นะไอ่ขี้โม้ของพี่</div>
+  </body>
+</html>
